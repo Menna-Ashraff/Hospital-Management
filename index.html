@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title> AL HAYA Hospital | Home </title>
+
+
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/header.css">
+
+
+		<!-- CSS Customization -->
+		<link rel="stylesheet" href="assets/css/custom.css">
+
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<!-- Header v1 -->
+		<div class="header-v1">
+	
+
+				<!-- Navbar -->
+				<div class="navbar mega-menu" role="navigation">
+				<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="res-container">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+
+				<div class="navbar-brand">
+				<a href="index.html">
+				<img src="assets/img/LOGO.jpg" alt="Logo" height="55" width="170">
+				</a>
+				</div>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-responsive-collapse">
+				<div class="res-container">
+				<ul class="nav navbar-nav">
+
+
+
+				<li class="mega-menu-fullwidth">
+				<a href="index.html" >
+				HOME
+				</a>
+
+				</li>
+
+				<li class="mega-menu-fullwidth">
+				<a href="aboutus.html" >
+				ABOUT US
+				</a>	
+				</li>
+
+				<li class="mega-menu-fullwidth">
+				<a href="doctors.html" >
+				DOCTORS
+				</a>
+
+				</li>
+
+				<li class="mega-menu-fullwidth">
+				<a href="gallery.html" >
+				GALLERY
+				</a>
+				</li>
+
+				<li class="mega-menu-fullwidth">
+				<a href="contactus.html" >
+				CONTACT US
+				</a>	
+				</li>
+				
+				<li class="mega-menu-fullwidth">
+				<a href="consultation.html">
+					CONSULTATION
+				</a>
+				</li>
+				</ul>
+
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+
+
+
+			<!-- Slider -->
+			<div id="slide">
+			<div class="slideshow-container">
+			<div class="mySlides fade"> <img src="assets/img/AL_HAYA.jpg" alt="Slider1" style="width:100%"> </div>
+			<div class="mySlides fade"> <img src="assets/img/reroom.jpg" alt="Slider2" style="width:100%"> </div>
+			<div class="mySlides fade"> <img src="assets/img/Waiting_hall.jpg" alt="Slider3" style="width:100%"> </div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+			</div>
+			<br>
+			<div style="text-align:center"> 
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			</div>
+			</div>
+
+			<script>
+			var slideIndex = 0;
+			showSlides();
+			var slides,dots;
+
+			function showSlides() {
+			var i;
+			slides = document.getElementsByClassName("mySlides");
+			dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex> slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 8000); // Change image every 8 seconds
+			}
+
+			function plusSlides(position) {
+			slideIndex +=position;
+			if (slideIndex> slides.length) {slideIndex = 1}
+			else if(slideIndex<1){slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			}
+
+			function currentSlide(index) {
+			if (index> slides.length) {index = 1}
+			else if(index<1){index = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[index-1].style.display = "block";  
+			dots[index-1].className += " active";
+			}
+			</script>
+
+
+
+		<!--Welcome-->
+		<div class="container content-md welcomeSection">
+		<div class="row section1">
+		<div class="col-md-6" style="margin-bottom: 40px;" style="border:2px solid black background rgb(94, 41, 148);">
+			<h2 class="title-v2" ;>WELCOME TO <span style="color: #6f2cc0;"> AL HAYA HOSPITAL </span></h2>
+			<p style="text-align: justify; font-size: 14px;">Al-Haya Egyptian Hospital was established more than 50 years ago and has more than 30 branches at the level of the Republic.</p>
+			<p style="text-align: justify; font-size: 14px;">Working in Al-Haya Hospital, a group of best and competent doctors aim to provide the highest level of efficiency in the treatment and satisfaction of our patients.</p> 
+			<p style="text-align: justify; font-size: 14px;"> Al Haya Hospital provides the best modern devices and methods of treatment in all specializations such as orthopedics, cardiology, pectoral diseases, tumors, interior and dermatology, as well as all aspects of children.</p> <br>
+
+		</div>
+		<div class="col-md-6 overflow-h">
+			<img style="border-radius: 50px; margin-left: 190px;width:65%;" src="assets/img/doctors.jpg" >
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+</div>
+
+</body>
+</html
